@@ -1,10 +1,8 @@
 Config = {}
 Config.Locale = 'fr'
 
-Config.Item = 'secretkey'  --name of the item needed
-
 Config.Removekey = true --Remove key from inventory once used
-
+Config.Item = 'green-keycard'
 Config.DoorList = {
 
 	{
@@ -12,8 +10,9 @@ Config.DoorList = {
 		objYaw = 135.0,
 		objCoords  = vector3(-1145.898, -1991.144, 14.18357),
 		textCoords = vector3(-1145.898, -1991.144, 14.18357),
-		needJob = false, -- Job is needed with the key ? 
-		authorizedJobs = { 'police','sheriff', 'state' },
+		needJob = true, -- Job is needed with the key ? 
+		authorizedJobs = { 'police','sheriff', 'state', 'green-keycard' },
+		keyNeeded = { 'green-keycard' }, --The Item needed to open
 		locked = true -- Default state is locked or not
 	}
 
