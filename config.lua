@@ -1,7 +1,7 @@
 Config = {}
 Config.Locale = 'fr'
 
-Config.Item = 'green-keycard'  --name of the item needed
+Config.Item = 'secretkey'  --name of the item needed
 
 Config.Removekey = true --Remove key from inventory once used
 
