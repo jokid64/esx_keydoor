@@ -6,6 +6,15 @@ You can choose to remove key from player inventory once door is open and decide 
 
 Probably some clean possible.
 
+#Install
+1. Edit config.lua to your needs
 
+2. If you want add more doors, get help with https://wiki.gtanet.work/index.php?title=Doors to get hash and vectors then find model name with the hash on https://plebmasters.de/?app=objects
  
+3. Add esx_keydoor to tour resources folder 
+
+4. Start it in your server.cfg
+
+#ToDo
+1. Adding multiple keys for differents doors [WIP]
 
