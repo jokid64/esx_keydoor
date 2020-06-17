@@ -39,16 +39,11 @@ end)
 RegisterServerEvent('esx_keydoor:removekey')
 AddEventHandler('esx_keydoor:removekey', function(item, amount)
 local xPlayer = ESX.GetPlayerFromId(source)
-xPlayer.removeInventoryItem(Config.Item, 1)
+xPlayer.removeInventoryItem(item, amount)
 end)
 
-
-
 function IsAuthorized(jobName, doorID)
-    local xPlayer = ESX.GetPlayerFromId(source)
-    local item = xPlayer.getInventoryItem(Config.Item)
-if item.count > 0 then
-	if needJob then
+	if doorID.needJob then
 		for _,job in pairs(doorID.authorizedJobs) do
 			if job == jobName then
 				return true
@@ -57,5 +52,4 @@ if item.count > 0 then
 	else
 	return true
 	end
-end
 end
