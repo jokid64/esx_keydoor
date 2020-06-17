@@ -2,7 +2,7 @@ All credits go to https://github.com/ESX-PUBLIC/esx_doorlock
 
 I modified this one to be able to lock doors and unlock it with a special key (you have to create an item) and specific job (or not).
 
-You can choose to remove key from player inventory once door is open and decide if a job is needed or not.
+You can choose to remove key from player inventory once door is open and decide if a job is needed or not.  Each door can have its own key.
 
 Probably some clean possible.
 
@@ -16,6 +16,4 @@ Add esx_keydoor to tour resources folder
 
 Start it in your server.cfg
 
-#ToDo
 
-Adding multiple keys for differents doors [WIP]
