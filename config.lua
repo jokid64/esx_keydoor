@@ -1,6 +1,5 @@
 Config = {}
-Config.Locale = 'fr'
-Config.Removekey = true --Remove key from inventory once used
+Config.Locale = 'en'
 Config.DoorList = {
 
 	{
@@ -11,6 +10,7 @@ Config.DoorList = {
 		needJob = true, -- Job is needed with the key ? 
 		authorizedJobs = { 'police','sheriff', 'state' },
 		keyNeeded = 'green-keycard', --The Item needed to open
+		removekey = true, -- Remove key from inventory once used
 		locked = true -- Default state is locked or not
 	},
 	
@@ -22,6 +22,7 @@ Config.DoorList = {
 		needJob = false, -- Job is needed with the key ? 
 		authorizedJobs = { 'police','sheriff', 'state' },
 		keyNeeded = 'magickey', --The Item needed to open
+		removekey = false,
 		locked = true -- Default state is locked or not
 	}
 

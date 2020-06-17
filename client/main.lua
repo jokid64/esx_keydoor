@@ -119,7 +119,7 @@ Citizen.CreateThread(function()
 								if count > 0 then
 										doorID.locked = not doorID.locked
 										TriggerServerEvent('esx_keydoor:updateState', k, doorID.locked) -- Broadcast new state of the door to everyone
-									if Config.Removekey then
+									if doorID.removekey then
 										TriggerServerEvent('esx_keydoor:removekey', name, 1)
 									end
 								else
