@@ -93,6 +93,9 @@ Citizen.CreateThread(function()
 				if doorID.locked then
 					displayText = _U('locked')
 				end
+				if not doorID.locked then
+					displayText = _U('unlocked')
+				end
 
 				if isAuthorized then
 					displayText = _U('press_button')
@@ -104,27 +107,24 @@ Citizen.CreateThread(function()
 					if isAuthorized then
 							local inventory = ESX.GetPlayerData().inventory
 							local count = 0
-						--	local itemname = doorID.keyNeeded
+							
 								for i=1, #inventory, 1 do
+								local itemname = doorID.keyNeeded
 									if inventory[i].name == itemname then
 										count = inventory[i].count
 										name = inventory[i].name
 									end
 								end
-								for _,key in pairs(doorID.keyNeeded) do
-									if key == name then
-										if count > 0 then
-											doorID.locked = not doorID.locked
-											TriggerServerEvent('esx_keydoor:updateState', k, doorID.locked) -- Broadcast new state of the door to everyone
-												if Config.Removekey then
-													TriggerServerEvent('esx_keydoor:removekey', name, 1)
-												end
-										else
-										ESX.ShowNotification(_U('nokey'))
-										end
-									ESX.ShowNotification('oups')
+								
+								if count > 0 then
+										doorID.locked = not doorID.locked
+										TriggerServerEvent('esx_keydoor:updateState', k, doorID.locked) -- Broadcast new state of the door to everyone
+									if Config.Removekey then
+										TriggerServerEvent('esx_keydoor:removekey', name, 1)
 									end
-								end	
+								else
+									ESX.ShowNotification(_U('nokey'))
+								end
 
 					end
 				end
@@ -132,15 +132,6 @@ Citizen.CreateThread(function()
 		end
 	end
 end)
---[[
-function getKey(doorID)
-
-	if count > 0 then
-		return true
-	else
-		return false
-	end	
-end]]
 
 function IsAuthorized(doorID)
 
@@ -150,6 +141,8 @@ function IsAuthorized(doorID)
 				return true
 			end
 		end
+	else
+	return true
 	end
 end
 
