@@ -1,6 +1,7 @@
 Locales ['fr'] = {
   ['unlocked'] = '~g~Ouvert~s~',
-  ['locked'] = '~r~Votre Job ne vous permet pas de voir ce qui se cache ici...~s~',
+  ['locked'] = '~r~fermé à clé~s~',
+  ['aunlocked'] = '[E] ~g~Ouvert~s~',
+  ['alocked'] = '[E] ~r~Fermé à clé~s~',
   ['nokey'] = 'Il vous manque la clé ...',
-  ['press_button'] = '[E] ~r~Ouvrir avec la clé~s~',
 }
