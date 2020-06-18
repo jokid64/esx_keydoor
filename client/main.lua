@@ -97,8 +97,12 @@ Citizen.CreateThread(function()
 					displayText = _U('unlocked')
 				end
 
-				if isAuthorized then
-					displayText = _U('press_button')
+				if isAuthorized and doorID.locked then
+					displayText = _U('alocked')
+				end
+
+				if isAuthorized and not doorID.locked then
+					displayText = _U('aunlocked')
 				end
 
 				ESX.Game.Utils.DrawText3D(doorID.textCoords, displayText, size)
